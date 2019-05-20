@@ -5,7 +5,10 @@
  */
 package com.progmatic.tictactoeexam.interfaces;
 
+import com.progmatic.tictactoeexam.BoardImp;
 import com.progmatic.tictactoeexam.Cell;
+import com.progmatic.tictactoeexam.SimplePlayerImp;
+import com.progmatic.tictactoeexam.VictoryAwarePlayerImp;
 import com.progmatic.tictactoeexam.exceptions.CellException;
 import com.progmatic.tictactoeexam.enums.PlayerType;
 import java.util.List;
@@ -273,17 +276,17 @@ public class TicTacToeTest {
     
     //TODO
     private Board getBoardImpl(){
-        return null;
+        return new BoardImp();
     }
     
     //TODO
     private Player simplePlayerImpl(PlayerType p){
-        return null;
+        return new SimplePlayerImp(p);
     }
     
     //TODO
     private Player victoryAwarePlayerImpl(PlayerType p){
-        return null;
+        return new VictoryAwarePlayerImp(p);
     }
 
 }
